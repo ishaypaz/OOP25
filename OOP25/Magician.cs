@@ -9,10 +9,10 @@ namespace OOP25
    class Magician : INameable, IComparable<Magician>
     {
         public string Name { get; protected set; }
-        public int Birthtwon { get; protected set; }
+        public string Birthtwon { get; protected set; }
         public string FavoriteSpell { get; protected set; }
 
-        public Magician(string name, int birthtwon, string favoriteSpell)
+        public Magician(string name, string birthtwon, string favoriteSpell)
         {
             Name = name;
             Birthtwon = birthtwon;
@@ -26,7 +26,7 @@ namespace OOP25
                 if (name == "Name")
                     return this.Name;
                 if (name == "Birthtwon")
-                    return this.Birthtwon.ToString();
+                    return this.Birthtwon;
                 if (name == "FavoriteSpell")
                     return this.FavoriteSpell;
                 return "Unknown";
@@ -37,7 +37,7 @@ namespace OOP25
                 if (name == "Name")
                     this.Name = value;
                 if (name == "Birthtwon")
-                    this.Birthtwon = Convert.ToInt32(value);
+                    this.Birthtwon = value;
                 if (name == "FavoriteSpell")
                      this.FavoriteSpell = value;
             }

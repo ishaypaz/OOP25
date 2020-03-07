@@ -9,10 +9,15 @@ namespace OOP25
      class Knight : INameable, IComparable<Knight>
     {
         public string Name { get; protected set; }
-        public int Birthtwon { get; protected set; }
+        public string Birthtwon { get; protected set; }
         public string Title { get; protected set; }
 
-        public Knight(string name, int birthtwon, string title)
+        public Knight()
+        {
+                
+        }
+
+        public Knight(string name, string birthtwon, string title)
         {
             Name = name;
             Birthtwon = birthtwon;
@@ -26,7 +31,7 @@ namespace OOP25
                 if (name == "Name")
                     return this.Name;
                 if (name == "Birthtwon")
-                    return this.Birthtwon.ToString();
+                    return this.Birthtwon;
                 if (name == "Title")
                     return this.Title;
                 return "Unknown";
@@ -36,7 +41,7 @@ namespace OOP25
                 if (name == "Name")
                     this.Name = value;
                 if (name == "Birthtwon")
-                    this.Birthtwon = Convert.ToInt32(value);
+                    this.Birthtwon = value;
                 if (name == "Title")
                     this.Title = value;
                  
